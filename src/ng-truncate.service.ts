@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 import { DoorgetsTruncateParser } from './ng-truncate.parser';
+import { IDoorgetsTruncateOptions } from './ng-truncate.interface';
 
-let dgTruncateOptions = {
+let dgTruncateOptions: IDoorgetsTruncateOptions = {
   limit: 100,
   trail: '...',
   position: 'right',
@@ -20,9 +21,9 @@ export class DoorgetsTruncateService {
     this._parser = DgTruncateParser;
   }
 
-  truncate(sentence: string, options?: any) {
+  truncate(sentence: string, options?: IDoorgetsTruncateOptions) {
     options = typeof options === 'object' ? options : {};
-    const _options = Object.assign({}, dgTruncateOptions, options);
+    const _options: IDoorgetsTruncateOptions = Object.assign({}, dgTruncateOptions, options);
     return this._parser.parse(sentence, _options);
   }
 

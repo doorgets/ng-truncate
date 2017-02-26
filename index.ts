@@ -8,6 +8,7 @@ export * from "./src/ng-truncate.pipe";
 export * from "./src/ng-truncate.parser";
 export * from "./src/ng-truncate.directive";
 export * from "./src/ng-truncate.service";
+export * from "./src/ng-truncate.interface";
 
 @NgModule({
   providers: [DoorgetsTruncateService],

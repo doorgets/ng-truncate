@@ -1,8 +1,10 @@
+import { IDoorgetsTruncateOptions } from './ng-truncate.interface';
+
 export class DoorgetsTruncateParser {
 
   regexWord = /\s+/;
 
-  parse(sentence: string, options?: any) {
+  parse(sentence: string, options?: IDoorgetsTruncateOptions) {
     if (typeof sentence !== 'string') {
       throw new Error('Parameter "sentence" must be string');
     }
@@ -13,7 +15,7 @@ export class DoorgetsTruncateParser {
       words: false
     };
 
-    const _option = typeof options === 'object'
+    const _option: IDoorgetsTruncateOptions = typeof options === 'object'
       ? Object.assign(originOptions, options)
       : originOptions;
 

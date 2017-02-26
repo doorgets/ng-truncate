@@ -1,5 +1,6 @@
 import { Directive, Input, ElementRef, Renderer, AfterViewChecked } from '@angular/core';
 import { DoorgetsTruncateService} from './ng-truncate.service';
+import { IDoorgetsTruncateOptions } from './ng-truncate.interface';
 
 @Directive({
   selector: '[dgTruncate]'
@@ -9,8 +10,8 @@ export class DoorgetsTruncateDirective implements AfterViewChecked {
 
   currentSentence: string;
 
-  lastOptions: any;
-  currentOptions: any = {};
+  lastOptions: IDoorgetsTruncateOptions;
+  currentOptions: IDoorgetsTruncateOptions = {};
 
   @Input() set dgTruncate(sentence: string) {
     if (typeof sentence === 'string') {
@@ -19,7 +20,7 @@ export class DoorgetsTruncateDirective implements AfterViewChecked {
     }
   }
 
-  @Input() set dgTruncateOptions(options: any) {
+  @Input() set dgTruncateOptions(options: IDoorgetsTruncateOptions) {
     this.currentOptions = typeof options === 'object'
       ? options
       : {};
@@ -108,7 +109,7 @@ export class DoorgetsTruncateDirective implements AfterViewChecked {
       : node.content.replace(currentSentence, node.currentValue);
   }
 
-  private alreadyTransformed(node: any, currentSentence: any, params: any) {
-    return node.lastSentence === currentSentence && this.lastOptions === params;
+  private alreadyTransformed(node: any, currentSentence: any, options: IDoorgetsTruncateOptions) {
+    return node.lastSentence === currentSentence && this.lastOptions === options;
   }
 }
