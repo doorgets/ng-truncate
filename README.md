@@ -2,6 +2,8 @@
 
 Angular 2+ (ngx) ng2 truncate module from Directive, Pipe and Service
 
+Plunker: https://plnkr.co/edit/al2OPuOwOUCniBjoZUfM
+
 #Table of contents
 * [Installation](#installation)
 * [Configuration](#configuration)
