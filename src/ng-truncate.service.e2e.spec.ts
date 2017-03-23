@@ -95,5 +95,17 @@ describe('DoorgetsTruncateService', () => {
 
     let truncated = truncateService.truncate('abcde fghi jklmn opqrs tuvwx yz');
     expect(truncated).toEqual('abcde fghi jklmn opqrs***');
+
+    options = {
+      limit: 14,
+      trail: '***',
+      position: 'right',
+      words: true
+    };
+
+    truncateService.init(options);
+
+    truncated = truncateService.truncate('abcde fghi jklmn opqrs tuvwx yz');
+    expect(truncated).toEqual('abcde fghi jklmn opqrs tuvwx yz');
   });
 });

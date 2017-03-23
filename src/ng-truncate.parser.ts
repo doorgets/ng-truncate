@@ -23,6 +23,11 @@ export class DoorgetsTruncateParser {
       return sentence;
     }
 
+    const _words = sentence.split(' ')
+    if (_words.length < _option.limit && _option.words) {
+      return sentence;
+    }
+
     const splitTag: any = _option.words
       ? this.regexWord
       : '';
