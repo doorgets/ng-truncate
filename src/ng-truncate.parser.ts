@@ -23,7 +23,7 @@ export class DoorgetsTruncateParser {
       return sentence;
     }
 
-    const _words = sentence.split(' ')
+    const _words = sentence.split(' ');
     if (_words.length < _option.limit && _option.words) {
       return sentence;
     }
