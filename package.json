@@ -1,6 +1,6 @@
 {
   "name": "doorgets-ng-truncate",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Angular 2 (ngx) ng2 truncate module from Directire, Pipe and Service",
   "main": "bundles/doorgets-ng-truncate.umd.js",
   "directories": {},
