@@ -35,7 +35,7 @@ describe('DoorgetsTruncateParser', () => {
     })).toEqual(testString);
   });
 
-  it('results for odd and even limits for the same string (position: center) shall be different and proportionally', () => {
+  it('results for odd and even limits for the same string (position: center) shall be different', () => {
     let testString = "This is a sample string";
     let parseEvenLimit = (parser.parse(testString, {
         limit: 4,
@@ -49,7 +49,7 @@ describe('DoorgetsTruncateParser', () => {
     expect(parseEvenLimit === parseOddLimit).toBeFalsy();
   });
 
-  it('results for nearest greater odd limit shall be longer that results for an even limit if position is the input is 1 character longer than the biggest limit', () => {
+  it('results for nearest greater odd limit shall be longer than results for an even limit if position is center and the input is 1 character longer than the biggest specified limit', () => {
     let testString = "This is a sample string";
     let parseEvenLimit = (parser.parse(testString, {
       limit: 4,
