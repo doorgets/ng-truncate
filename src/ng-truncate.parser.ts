@@ -44,7 +44,7 @@ export class DoorgetsTruncateParser {
     const keys = sentence.split(splitTag);
     if (keys.length > _option.limit) {
       if (isMiddleOption) {
-        prefix = keys.slice(0, _option.limit / 2).join(joinTag);
+        prefix = keys.slice(0, _option.limit % 2 == 0 ? _option.limit / 2 : _option.limit / 2 + 1).join(joinTag);
         suffix = keys.reverse().slice(0, _option.limit / 2).reverse().join(joinTag);
       } else {
         sentence = keys.slice(0, _option.limit).join(joinTag);
@@ -55,7 +55,7 @@ export class DoorgetsTruncateParser {
       case 'left':
         return _option.trail + sentence;
       case 'center':
-        return prefix + _option.trail  + suffix;
+        return (prefix || suffix) ? prefix + _option.trail + suffix : sentence;
       default:
         return sentence + _option.trail;
     }
