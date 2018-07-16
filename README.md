@@ -1,24 +1,24 @@
 # doorgets-ng-truncate [![Build Status](https://travis-ci.org/doorgets/ng-truncate.svg?branch=master)](https://travis-ci.org/doorgets/ng-truncate) [![Dependency Status](https://david-dm.org/doorgets/ng-truncate.svg)](https://david-dm.org/doorgets/ng-truncate)
 
-Angular 2+ (ngx) ng2 truncate module from Directive, Pipe and Service
+Angular 6 (ngx) ng6 truncate module from Directive, Pipe and Service
 
 Plunker: https://plnkr.co/edit/al2OPuOwOUCniBjoZUfM?p=preview
 
-#Table of contents
+# Table of contents
 * [Installation](#installation)
 * [Configuration](#configuration)
 * [How it works](#how-it-works)
 * [Examples](#examples)
 * [Api Reference](#api-reference)
 
-##Installation
+## Installation
 
 Install npm module
 
 ```sh
 npm install doorgets-ng-truncate --save
 ```
-##Configuration
+## Configuration
 
 ```ts
 import { BrowserModule } from '@angular/platform-browser';
@@ -68,7 +68,7 @@ export class AppComponent implements OnInit {
 }
 ```
 
-##How it works
+## How it works
 
 Use Object as options:
 ```ts
@@ -81,9 +81,9 @@ Use Object as options:
 ```
 
 
-##Exemples
+## Exemples
 
-####Truncate by chars
+#### Truncate by chars
 __@Directive:__
 ```html
     <span [dgTruncate] [dgTruncateOptions]="{limit: 3, trail: '***'}">
@@ -118,7 +118,7 @@ __@Pipe:__
 
 
 
-####Truncate by words
+#### Truncate by words
 
 __@Directive:__
 ```html
@@ -137,7 +137,7 @@ __@Pipe:__
 > *Output:* __one two three...__
 
 
-##Api Reference
+## Api Reference
 
 __Quick init__
 
