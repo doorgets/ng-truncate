@@ -1,7 +1,7 @@
 {
   "name": "doorgets-ng-truncate",
-  "version": "2.0.1",
-  "description": "Angular 2 (ngx) ng2 truncate module from Directire, Pipe and Service",
+  "version": "2.0.2",
+  "description": "Angular 10 (ngx) truncate module from Directire, Pipe and Service",
   "author": {
     "name": "Mounir R'Quiba"
   },
