@@ -1,4 +1,4 @@
-import { Directive, Input, ElementRef, Renderer, AfterViewChecked } from '@angular/core';
+import { Directive, Input, ElementRef, Renderer2, AfterViewChecked } from '@angular/core';
 import { DoorgetsTruncateService} from './ng-truncate.service';
 import { IDoorgetsTruncateOptions } from './ng-truncate.interface';
 
@@ -27,7 +27,7 @@ export class DoorgetsTruncateDirective implements AfterViewChecked {
   }
 
   constructor(
-    private _render: Renderer,
+    private _render: Renderer2,
     private _element: ElementRef,
     private _service: DoorgetsTruncateService
   ) {}

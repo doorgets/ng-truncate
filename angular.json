@@ -1,0 +1,50 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "doorgets-ng-truncate": {
+      "projectType": "library",
+      "root": "projects/doorgets-ng-truncate",
+      "sourceRoot": "projects/doorgets-ng-truncate/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/doorgets-ng-truncate/tsconfig.lib.json",
+            "project": "projects/doorgets-ng-truncate/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/doorgets-ng-truncate/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/doorgets-ng-truncate/src/test.ts",
+            "tsConfig": "projects/doorgets-ng-truncate/tsconfig.spec.json",
+            "karmaConfig": "projects/doorgets-ng-truncate/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/doorgets-ng-truncate/tsconfig.lib.json",
+              "projects/doorgets-ng-truncate/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    }},
+  "cli": {
+    "analytics": "b1386600-b2e4-4e5a-9152-fc40e83b6a2d"
+  },
+  "defaultProject": "doorgets-ng-truncate"
+}

@@ -1,0 +1,31 @@
+{
+  "name": "doorgets-ng-truncate",
+  "version": "2.0.1",
+  "description": "Angular 2 (ngx) ng2 truncate module from Directire, Pipe and Service",
+  "author": {
+    "name": "Mounir R'Quiba"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/doorgets/ng-truncate.git"
+  },
+  "keywords": [
+    "angular",
+    "angular 2",
+    "angular 10",
+    "truncate",
+    "i18n",
+    "ng"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/doorgets/ng-truncate/issues"
+  },
+  "peerDependencies": {
+    "@angular/common": "^10.1.6",
+    "@angular/core": "^10.1.6"
+  },
+  "dependencies": {
+    "tslib": "^2.0.0"
+  }
+}
